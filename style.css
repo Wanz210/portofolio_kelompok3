@@ -1,0 +1,29 @@
+/* CSS Kustom */
+
+/* KODE .page DAN .page.active DIHAPUS DARI SINI */
+
+/* Styling untuk transisi hamburger menu (INI TETAP ADA) */
+.hamburger-line {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animasi hamburger menjadi 'X' (INI TETAP ADA) */
+#menu-btn.open .hamburger-line-top {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+#menu-btn.open .hamburger-line-middle {
+    opacity: 0;
+}
+#menu-btn.open .hamburger-line-bottom {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Placeholder untuk foto (Opsional) */
+.foto-placeholder {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
