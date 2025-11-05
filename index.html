@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Iwan, Virta, Dhea</title>
-    <!-- Memuat Tailwind CSS (Framework) -->
+    <title>Portofolio | KELOMPOK 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Memuat CSS Kustom Anda -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- 1. Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo (Kiri) - Sekarang link ke index.html -->
+                
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-blue-600">
-                        KELOMPOK 3
+                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-blue-600">
+                        <img class="h-16 w-16 mr-2" src="images/logo portofolio1.png" alt="Logo Kelompok">
+                        <span>KELOMPOK 3</span>
                     </a>
                 </div>
 
-                <!-- Hamburger Menu (Kanan) -->
                 <div class="md:hidden">
                     <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Buka menu</span>
@@ -35,7 +31,6 @@
                     </button>
                 </div>
 
-                <!-- Navigasi Desktop - Link diubah ke .html -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="iwan.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Iwan</a>
@@ -46,7 +41,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu - Link diubah ke .html -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="iwan.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Iwan</a>
@@ -56,30 +50,22 @@
         </div>
     </nav>
 
-    <!-- Konten Utama -->
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
-
-        <!-- HALAMAN AWAL (HOME) -->
         <section class="min-h-[80vh] flex items-center justify-center text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Selamat Datang di Website <br class="hidden md:block">
                 <span class="text-blue-600">Portofolio Iwan Virtsa Dhea</span>
             </h1>
         </section>
-
-        <!-- KONTEN IWAN, VIRTA, DAN DHEA DIHAPUS DARI SINI -->
-
     </main>
 
-    <!-- 7. Footer -->
     <footer class="bg-gray-800 text-white mt-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
             <p>&copy; 2025 &middot; Dibuat oleh Iwan, Virtsa, & Dhea.</p>
-            <p class="text-sm text-gray-400 mt-1">Proyek Website Portofolio Kelompok.</p>
+            <p class="text-sm text-gray-400 mt-1">Proyek Website Portofolio Kelompok 3.</p>
         </div>
     </footer>
 
-    <!-- Memuat JavaScript Kustom Anda -->
     <script src="script.js"></script>
 
 </body>
