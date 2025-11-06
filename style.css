@@ -1,13 +1,33 @@
-/* CSS Kustom */
+/* style.css */
 
-/* KODE .page DAN .page.active DIHAPUS DARI SINI */
-
-/* Styling untuk transisi hamburger menu (INI TETAP ADA) */
-.hamburger-line {
-    transition: all 0.3s ease-in-out;
+/* --- Variabel CSS Kustom (Opsional, tapi bagus untuk konsistensi) --- */
+:root {
+    --primary-color: #2563EB; /* Biru terang dari blue-600 */
+    --secondary-color: #1E3A8A; /* Biru gelap */
+    --text-color: #1f2937; /* Gray-900 */
+    --bg-light: #f9fafb; /* Gray-50 */
 }
 
-/* Animasi hamburger menjadi 'X' (INI TETAP ADA) */
+/* --- Styling Global dan Navigasi --- */
+
+/* Memastikan elemen menggunakan warna teks yang konsisten */
+body {
+    color: var(--text-color);
+}
+
+/* Logo di Navbar */
+nav .flex-shrink-0 a span {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Styling untuk transisi hamburger menu (MEMPERTAHANKAN LOGIKA ANDA) */
+.hamburger-line {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-color); /* Memastikan warna garis */
+}
+
+/* Animasi hamburger menjadi 'X' (MEMPERTAHANKAN LOGIKA ANDA) */
 #menu-btn.open .hamburger-line-top {
     transform: rotate(45deg) translate(5px, 6px);
 }
@@ -18,12 +38,31 @@
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* Placeholder untuk foto (Opsional) */
-.foto-placeholder {
-    background-color: #e2e8f0;
-    color: #4a5568;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
+/* --- Styling Bagian Utama (Foto Anggota) --- */
+
+/* Efek hover pada setiap kartu foto */
+.flex-col:hover .rounded-full {
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5), 0 4px 6px -2px rgba(37, 99, 235, 0.2); /* Shadow berwarna biru */
+}
+
+/* Efek transisi pada teks nama */
+.flex-col:hover p:first-of-type {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Styling untuk teks deskripsi di bawah foto */
+.text-sm.text-gray-500 {
+    font-style: italic;
+    font-size: 0.8rem; /* Sedikit lebih kecil */
+}
+
+/* --- Styling Footer (Meskipun sudah cukup di Tailwind) --- */
+footer {
+    border-top: 4px solid var(--primary-color); /* Tambahkan garis warna di atas footer */
+}
+
+footer p:first-of-type {
+    font-weight: 600;
 }
