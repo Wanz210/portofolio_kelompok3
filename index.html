@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | KELOMPOK 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#2563EB', // blue-600
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-blue-100 text-gray-800 font-sans">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-blue-600">
-                        <img class="h-16 w-16 mr-2" src="images/logo portofolio1.png" alt="Logo Kelompok">
+                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-primary-blue">
+                        <img class="h-16 w-16 mr-2" src="images/logo portofolio1.png" alt="Logo Kelompok"> 
                         <span>KELOMPOK 3</span>
                     </a>
                 </div>
@@ -33,9 +44,9 @@
 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="iwan.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Iwan</a>
-                        <a href="virtsa.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Virtsa</a>
-                        <a href="dhea.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Dhea</a>
+                        <a href="iwan.html" class="text-gray-600 hover:bg-primary-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Portofolio Iwan</a>
+                        <a href="virtsa.html" class="text-gray-600 hover:bg-primary-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Portofolio Virtsa</a>
+                        <a href="dhea.html" class="text-gray-600 hover:bg-primary-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Portofolio Dhea</a>
                     </div>
                 </div>
             </div>
@@ -43,30 +54,77 @@
 
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="iwan.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Iwan</a>
-                <a href="virtsa.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Virtsa</a>
-                <a href="dhea.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Dhea</a>
+                <a href="iwan.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">Portofolio Iwan</a>
+                <a href="virtsa.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">Portofolio Virtsa</a>
+                <a href="dhea.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">Portofolio Dhea</a>
             </div>
         </div>
     </nav>
 
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <section class="min-h-[80vh] flex items-center justify-center text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+        <section class="flex items-center justify-center text-center pt-16 pb-8">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
                 Selamat Datang di Website <br class="hidden md:block">
-                <span class="text-blue-600">Portofolio Iwan Virtsa Dhea</span>
+                <span class="text-primary-blue">Portofolio Iwan Virtsa Dhea</span>
             </h1>
         </section>
+
+        <section class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl border-4 border-primary-blue transform hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="images/me.jpg" alt="Foto Iwan">
+                    </div>
+                    <p class="mt-4 text-xl font-semibold text-gray-700">Iwan Riyandi</p>
+                    <p class="text-sm text-gray-500">Ketua Kelompok 3</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl border-4 border-primary-blue transform hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="images/VIRTSA.jpg" alt="Foto Virtsa">
+                    </div>
+                    <p class="mt-4 text-xl font-semibold text-gray-700">Virtsa Gita Saputri</p>
+                    <p class="text-sm text-gray-500">Anggota Kelompok 3</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl border-4 border-primary-blue transform hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="images/dheaaa.jpg" alt="Foto Dhea">
+                    </div>
+                    <p class="mt-4 text-xl font-semibold text-gray-700">Nahdya Nahdatul Jannah</p>
+                    <p class="text-sm text-gray-500">Anggota Kelompok 3</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <div class="min-h-40"></div>
     </main>
 
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
             <p>&copy; 2025 &middot; Dibuat oleh Iwan, Virtsa, & Dhea.</p>
             <p class="text-sm text-gray-400 mt-1">Proyek Website Portofolio Kelompok 3.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+                menuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
 
+                // Mengganti ikon hamburger menjadi ikon 'X' saat terbuka
+                const [iconOpen, iconClose] = menuBtn.querySelectorAll('svg');
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
