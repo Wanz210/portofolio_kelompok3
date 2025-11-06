@@ -6,22 +6,42 @@
     <title>Portofolio Iwan | KELOMPOK 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#2563EB',
+                        'light-blue-bg': '#DBEAFE', // blue-100 for overall page background
+                        'light-box-bg': '#F0F9FF', // sky-50 for content boxes (kotak besar)
+                        'skill-green': '#A7F3D0',
+                        'skill-text': '#047857',
+                        'project-bg': '#FFFBEB',
+                        'project-border': '#FDE68A',
+                        'form-bg': '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-light-blue-bg text-gray-800 font-sans">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-blue-600">
+                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-primary-blue">
                         <img class="h-16 w-16 mr-2" src="images/logo portofolio1.png" alt="Logo Kelompok">
                         <span>KELOMPOK 3</span>
                     </a>
                 </div>
 
                 <div class="md:hidden">
-                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-blue" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Buka menu</span>
                         <div class="w-6 h-6 flex flex-col justify-around">
                             <span class="hamburger-line hamburger-line-top block w-full h-0.5 bg-gray-700"></span>
@@ -33,9 +53,9 @@
 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="iwan.html" class="text-blue-600 bg-blue-100 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Portofolio Iwan</a>
-                        <a href="virtsa.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Virtsa</a>
-                        <a href="dhea.html" class="text-gray-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portofolio Dhea</a>
+                        <a href="iwan.html" class="text-white bg-primary-blue px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Portofolio Iwan</a>
+                        <a href="virtsa.html" class="text-gray-600 hover:bg-primary-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Portofolio Virtsa</a>
+                        <a href="dhea.html" class="text-gray-600 hover:bg-primary-blue hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Portofolio Dhea</a>
                     </div>
                 </div>
             </div>
@@ -43,9 +63,9 @@
 
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="iwan.html" class="text-blue-600 bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Portofolio Iwan</a>
-                <a href="virtsa.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Virtsa</a>
-                <a href="dhea.html" class="text-gray-600 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Dhea</a>
+                <a href="iwan.html" class="text-primary-blue bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Portofolio Iwan</a>
+                <a href="virtsa.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Virtsa</a>
+                <a href="dhea.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Dhea</a>
             </div>
         </div>
     </nav>
@@ -54,93 +74,115 @@
 
         <section class="space-y-16">
             
-            <div class="flex flex-col md:flex-row items-center bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex flex-col md:flex-row items-center bg-light-box-bg p-8 rounded-lg shadow-lg">
                 <img src="images/me.jpg" alt="Foto Iwan" class="w-36 h-36 rounded-full object-cover shadow-md mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                 <div>
                     <h2 class="text-4xl font-bold text-gray-900">Iwan Riyandi</h2>
-                    <p class="text-xl text-blue-600 mt-2">Web Developer | Mahasiswa Sistem Informasi</p>
+                    <p class="text-xl text-primary-blue mt-2">Web Developer | Mahasiswa Sistem Informasi</p>
                     <p class="text-gray-600 mt-4">Deskripsi singkat tentang Iwan. Seorang profesional yang termotivasi dengan keahlian dalam pengembangan web front-end dan desain UI/UX.</p>
-                    <div class="mt-6 flex space-x-4">
-                        <a href="#" class="text-gray-500 hover:text-blue-600">LinkedIn</a>
-                        <a href="#" class="text-gray-500 hover:text-blue-600">GitHub</a>
-                        <a href="#" class="text-gray-500 hover:text-blue-600">Instagram</a>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://github.com/Wanz210" target="_blank" class="text-gray-500 hover:text-gray-900 transition duration-150 flex items-center" title="GitHub">
+                            <i class="fab fa-github fa-2x"></i> 
+                        </a>
+                        <a href="https://instagram.com/iwanriyandi_" target="_blank" class="text-gray-500 hover:text-pink-600 transition duration-150 flex items-center" title="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i> 
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="bg-light-box-bg p-8 rounded-lg shadow-lg">
                 <h3 class="text-3xl font-bold mb-6 text-center">Tentang Saya</h3>
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-full md:w-1/2">
+                
+                <div class="flex flex-col md:flex-row items-start gap-8">
+                    
+                    <div class="w-full md:w-3/5">
                         <p class="text-gray-700 leading-relaxed">
                             Tuliskan paragraf mendalam tentang diri Anda di sini. Ceritakan tentang latar belakang pendidikan, minat Anda di bidang teknologi, dan apa yang memotivasi Anda. 
                             <br><br>
                             Jelaskan filosofi kerja Anda, bagaimana Anda berkolaborasi dalam tim, dan tujuan karir jangka panjang Anda. Ini adalah tempat untuk menunjukkan kepribadian Anda.
                         </p>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <img src="https://placehold.co/600x400/BFDBFE/333?text=Foto+Aksi+Iwan" alt="Foto tentang Iwan" class="rounded-lg shadow-md object-cover w-full h-64">
+                    
+                    <div class="w-full md:w-2/5">
+                        <div class="bg-blue-200 flex items-center justify-center rounded-lg shadow-md w-full h-64 text-gray-800 text-2xl font-semibold p-4">
+                            <img src="images/iwan.jpg" alt="Hobi Iwan" class="object-cover w-full h-full rounded-lg">
+                        </div>
                     </div>
                 </div>
-            </div>
+                </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="bg-light-box-bg p-8 rounded-lg shadow-lg">
                 <h3 class="text-3xl font-bold mb-6 text-center">Pengalaman & Proyek</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="border rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://placehold.co/400x250/BFDBFE/333?text=Proyek+1" alt="Foto Proyek 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg">Nama Proyek 1</h4>
-                            <p class="text-gray-600 text-sm mt-1">Deskripsi singkat proyek atau pengalaman magang.</p>
-                        </div>
+                    
+                    <div class="border border-blue-300 bg-blue-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col items-center justify-center text-center h-64">
+                        <h4 class="font-bold text-3xl text-gray-800">Proyek 1</h4>
                     </div>
-                    <div class="border rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://placehold.co/400x250/BFDBFE/333?text=Proyek+2" alt="Foto Proyek 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg">Nama Proyek 2</h4>
-                            <p class="text-gray-600 text-sm mt-1">Deskripsi singkat proyek atau pengalaman organisasi.</p>
-                        </div>
+                    
+                    <div class="border border-blue-300 bg-blue-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col items-center justify-center text-center h-64">
+                        <h4 class="font-bold text-3xl text-gray-800">Proyek 2</h4>
                     </div>
-                    <div class="border rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://placehold.co/400x250/BFDBFE/333?text=Proyek+3" alt="Foto Proyek 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-bold text-lg">Nama Proyek 3</h4>
-                            <p class="text-gray-600 text-sm mt-1">Deskripsi singkat proyek lainnya.</p>
-                        </div>
+                    
+                    <div class="border border-blue-300 bg-blue-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-4 flex flex-col items-center justify-center text-center h-64">
+                        <h4 class="font-bold text-3xl text-gray-800">Proyek 3</h4>
                     </div>
+                    
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="bg-light-box-bg p-8 rounded-lg shadow-lg">
                 <h3 class="text-3xl font-bold mb-6 text-center">Keterampilan</h3>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">HTML5</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">CSS3</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">JavaScript</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">Tailwind CSS</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">React</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">Node.js</span>
-                    <span class="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">Figma</span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fab fa-html5 mr-2"></i> HTML5
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fab fa-css3-alt mr-2"></i> CSS3
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fab fa-js mr-2"></i> JavaScript
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fas fa-wind mr-2"></i> Tailwind CSS
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fab fa-react mr-2"></i> React
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fab fa-node-js mr-2"></i> Node.js
+                    </span>
+        
+                    <span class="bg-skill-green text-skill-text text-base font-medium px-4 py-2 rounded-full transform hover:scale-105 transition duration-150 shadow-sm flex items-center">
+                        <i class="fas fa-palette mr-2"></i> Figma
+                    </span>
+        
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            <div class="bg-light-box-bg p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
                 <h3 class="text-3xl font-bold mb-6 text-center">Hubungi Saya</h3>
                 <form action="#" method="POST">
                     <div class="mb-4">
                         <label for="name-iwan" class="block text-sm font-medium text-gray-700">Nama</label>
-                        <input type="text" id="name-iwan" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                        <input type="text" id="name-iwan" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required>
                     </div>
                     <div class="mb-4">
                         <label for="email-iwan" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" id="email-iwan" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                        <input type="email" id="email-iwan" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required>
                     </div>
                     <div class="mb-6">
                         <label for="message-iwan" class="block text-sm font-medium text-gray-700">Pesan</label>
-                        <textarea id="message-iwan" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required></textarea>
+                        <textarea id="message-iwan" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                        <button type="submit" class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue transition duration-150 ease-in-out">
                             Kirim Pesan
                         </button>
                     </div>
@@ -158,7 +200,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    menuBtn.classList.toggle('open'); 
+                    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+                    menuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
