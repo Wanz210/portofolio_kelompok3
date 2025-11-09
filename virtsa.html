@@ -9,27 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#2563EB',
-                        // Diubah menjadi pink-300: #F9A8D4 (Pink Lebih Terang)
-                        'light-pink-bg': '#F9A8D4', 
-                        // Diubah menjadi pink-100: #FCE7F8 (Kotak Konten Lebih Lembut)
-                        'light-box-bg': '#FCE7F8', 
-                        'skill-green': '#A7F3D0',
-                        'skill-text': '#047857',
-                        'project-bg': '#FFFBEB',
-                        'project-border': '#FDE68A',
-                        'form-bg': '#F8FAFC',
-                    }
-                }
-            }
-        }
-    </script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#2563EB',
+                        // Diubah menjadi Coklat Muda/Tan Hangat
+                        'bg-main': '#F9F4F0', 
+                        // Diubah menjadi Putih Bersih untuk Kotak Konten
+                        'bg-box': '#FFFFFF', 
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-light-pink-bg text-gray-800 font-sans"> 
+<body class="bg-bg-main text-gray-800 font-sans"> 
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +32,7 @@
                 
                 <div class="flex-shrink-0">
                     <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-primary-blue">
-                        <img class="h-16 w-16 mr-2" src="images/logo portofolio1.png" alt="Logo Kelompok">
+                        <img class="h-16 w-16 mr-2" src="images/logonew.png" alt="Logo Kelompok">
                         <span>KELOMPOK 3</span>
                     </a>
                 </div>

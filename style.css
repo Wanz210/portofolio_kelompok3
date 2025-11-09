@@ -16,6 +16,8 @@ body {
 }
 
 /* Logo di Navbar */
+/* Catatan: Selektor ini mungkin perlu disesuaikan jika struktur HTML berubah. 
+   Saat ini, ini menargetkan tag <span> di dalam link logo. */
 nav .flex-shrink-0 a span {
     color: var(--primary-color);
     transition: color 0.3s ease;
@@ -28,6 +30,7 @@ nav .flex-shrink-0 a span {
 }
 
 /* Animasi hamburger menjadi 'X' (MEMPERTAHANKAN LOGIKA ANDA) */
+/* Posisi translate disesuaikan agar transisi terlihat rapi */
 #menu-btn.open .hamburger-line-top {
     transform: rotate(45deg) translate(5px, 6px);
 }
@@ -38,14 +41,21 @@ nav .flex-shrink-0 a span {
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* --- Styling Bagian Utama (Foto Anggota) --- */
 
-/* Efek hover pada setiap kartu foto */
+/* ----------------------------------------------------
+   --- STYLING CUSTOM UNTUK HALAMAN UTAMA (INDEX.HTML) ---
+   (Jika halaman utama Anda menampilkan kartu per anggota)
+   ---------------------------------------------------- */
+
+/* Efek hover pada setiap kartu foto (Diasumsikan kartu adalah .flex-col utama) */
+/* Selector ini berisiko tinggi karena terlalu umum, tapi digunakan sesuai permintaan user */
 .flex-col:hover .rounded-full {
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5), 0 4px 6px -2px rgba(37, 99, 235, 0.2); /* Shadow berwarna biru */
+    /* Shadow berwarna biru dari primary-blue */
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5), 0 4px 6px -2px rgba(37, 99, 235, 0.2); 
+    transition: box-shadow 0.3s ease;
 }
 
-/* Efek transisi pada teks nama */
+/* Efek transisi pada teks nama (Asumsi teks nama adalah <p> pertama di .flex-col) */
 .flex-col:hover p:first-of-type {
     color: var(--primary-color);
     transform: translateY(-2px);
@@ -57,6 +67,7 @@ nav .flex-shrink-0 a span {
     font-style: italic;
     font-size: 0.8rem; /* Sedikit lebih kecil */
 }
+
 
 /* --- Styling Footer (Meskipun sudah cukup di Tailwind) --- */
 footer {
