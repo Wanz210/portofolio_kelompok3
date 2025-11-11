@@ -13,29 +13,39 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#2563EB',
-                        'bg-main': '#F9F4F0', // Latar belakang utama (Tan)
-                        'bg-box': '#FFFFFF', // Latar belakang kotak (Putih)
+                        // Coklat Tua Utama (menggantikan primary-blue)
+                        'primary-brown': '#4A3F35', // Warna coklat tua yang dominan
+                        // Background utama di luar kotak konten (krem lembut)
+                        'bg-main': '#F2F2F2', 
+                        // Background untuk semua kotak konten (putih krem sangat muda)
+                        'bg-box': '#FCF8F3', // Lebih mirip dengan gambar
+                        // Warna teks umum
+                        'text-dark': '#333333', 
+                        // Warna untuk list/badge skill (dijaga agar serasi dengan gambar skill sebelumnya)
+                        'skill-card-bg': '#FFF7E6', 
+                        'skill-badge-bg': '#FAEBD7', 
+                        // Warna untuk border / highlight yang lebih lembut
+                        'soft-brown': '#BDBDBD', // Untuk border garis bawah judul dll.
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-bg-main text-gray-800 font-sans"> 
+<body class="bg-bg-main text-text-dark font-sans"> 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-primary-blue">
+                    <a href="index.html" class="flex items-center text-xl md:text-2xl font-bold text-primary-brown">
                         <img class="h-16 w-16 mr-2" src="images/logonew.png" alt="Logo Kelompok">
                         <span>KELOMPOK 3</span>
                     </a>
                 </div>
 
                 <div class="md:hidden">
-                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-blue" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-brown" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Buka menu</span>
                         <div class="w-6 h-6 flex flex-col justify-around">
                             <span class="hamburger-line hamburger-line-top block w-full h-0.5 bg-gray-700"></span>
@@ -47,9 +57,9 @@
 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="iwan.html" class="text-gray-600 hover:bg-blue-50 hover:text-primary-blue px-4 py-2 rounded-lg text-base font-medium transition duration-150">Portofolio Iwan</a>
-                        <a href="virtsa.html" class="text-white bg-primary-blue px-4 py-2 rounded-lg text-base font-medium" aria-current="page">Portofolio Virtsa</a>
-                        <a href="dhea.html" class="text-gray-600 hover:bg-blue-50 hover:text-primary-blue px-4 py-2 rounded-lg text-base font-medium transition duration-150">Portofolio Dhea</a>
+                        <a href="iwan.html" class="text-text-dark hover:bg-primary-brown/10 hover:text-primary-brown px-4 py-2 rounded-lg text-base font-medium transition duration-150">Portofolio Iwan</a>
+                        <a href="virtsa.html" class="text-white bg-primary-brown px-4 py-2 rounded-lg text-base font-medium" aria-current="page">Portofolio Virtsa</a>
+                        <a href="dhea.html" class="text-text-dark hover:bg-primary-brown/10 hover:text-primary-brown px-4 py-2 rounded-lg text-base font-medium transition duration-150">Portofolio Dhea</a>
                     </div>
                 </div>
             </div>
@@ -57,27 +67,27 @@
 
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="iwan.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Iwan</a>
-                <a href="virtsa.html" class="text-primary-blue bg-blue-100 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Portofolio Virtsa</a>
-                <a href="dhea.html" class="text-gray-600 hover:bg-primary-blue hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Dhea</a>
+                <a href="iwan.html" class="text-text-dark hover:bg-primary-brown hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Iwan</a>
+                <a href="virtsa.html" class="text-primary-brown bg-primary-brown/10 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Portofolio Virtsa</a>
+                <a href="dhea.html" class="text-text-dark hover:bg-primary-brown hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portofolio Dhea</a>
             </div>
         </div>
     </nav>
 
     <main class="container mx-auto p-4 sm:p-6 lg:p-8 space-y-16">
         
-        <section id="hero-virtsa" class="flex flex-col md:flex-row items-center bg-bg-box p-8 rounded-xl shadow-2xl border-b-4 border-primary-blue/50">
+        <section id="hero-virtsa" class="flex flex-col md:flex-row items-center bg-bg-box p-8 rounded-xl shadow-2xl border-b-4 border-primary-brown/50">
             <img src="images/VIRTSA.jpg" alt="Foto Virtsa" class="w-36 h-36 rounded-full object-cover shadow-md mb-6 md:mb-0 md:mr-8 flex-shrink-0">
             <div>
-                <h2 class="text-4xl font-bold text-gray-900">Virtsa Gita Saputri</h2>
-                <p class="text-xl text-primary-blue mt-2">Graphic Designer & Content Creator | Mahasiswa Sistem Informasi</p>
-                <p class="text-gray-600 mt-4">Saya Virtsa, seorang desainer grafis dengan hasrat untuk bercerita melalui visual. Saya percaya desain yang baik adalah jembatan antara brand dan audiensnya.
+                <h2 class="text-4xl font-bold text-text-dark">Virtsa Gita Saputri</h2>
+                <p class="text-xl text-primary-brown mt-2">Graphic Designer & Content Creator | Mahasiswa Sistem Informasi</p>
+                <p class="text-text-dark mt-4">Saya Virtsa, seorang desainer grafis dengan hasrat untuk bercerita melalui visual. Saya percaya desain yang baik adalah jembatan antara brand dan audiensnya.
                                                 Saya juga aktif membuat konten di media sosial seputar tips desain dan produktivitas.</p>
                 <div class="flex space-x-4 mt-4">
-                    <a href="https://github.com/virtsa/VIRTSAGITA" target="_blank" class="text-gray-500 hover:text-gray-900 transition duration-150 flex items-center" title="GitHub">
+                    <a href="https://github.com/virtsa/VIRTSAGITA" target="_blank" class="text-gray-500 hover:text-text-dark transition duration-150 flex items-center" title="GitHub">
                         <i class="fab fa-github fa-2x"></i> 
                     </a>
-                    <a href="https://www.instagram.com/virtsagitaaa" target="_blank" class="text-gray-500 hover:text-pink-600 transition duration-150 flex items-center" title="Instagram">
+                    <a href="https://www.instagram.com/virtsagitaaa" target="_blank" class="text-gray-500 hover:text-primary-brown transition duration-150 flex items-center" title="Instagram">
                         <i class="fab fa-instagram fa-2x"></i> 
                     </a>
                 </div>
@@ -85,12 +95,12 @@
         </section>
 
         <section id="about-virtsa" class="bg-bg-box p-8 rounded-xl shadow-xl">
-            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-900 border-b-2 pb-2 border-primary-blue/30">Tentang Saya</h3>
+            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-text-dark border-b-2 pb-2 border-primary-brown/30">Tentang Saya</h3>
             
             <div class="flex flex-col md:flex-row items-start gap-8">
                 
                 <div class="w-full md:w-3/5">
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="text-text-dark leading-relaxed">
                         Saya Virtsa Gita Saputri, seorang mahasiswi Sistem Informasi di Universitas Musamus Merauke. Sebagai lulusan jurusan IPA dari SMAN 1 Merauke, saya memiliki dasar analitis yang kuat dan sangat termotivasi oleh keinginan untuk memecahkan masalah. Saat ini, saya memiliki minat yang besar dan sedang fokus mendalami bidang Desain Grafis serta Pembuatan Konten (Content Creator). Saya bersemangat untuk memadukan keahlian teknis yang saya peroleh dari studi Sistem Informasi seperti pengembangan web dan aplikasi dengan kreativitas visual untuk menciptakan solusi yang tidak hanya fungsional tetapi juga efektif dan menarik secara estetika.
                         <br><br>
                         Filosofi kerja saya berfokus pada kolaborasi dan komunikasi yang efektif dalam tim. Saya percaya bahwa setiap anggota tim memiliki kontribusi yang berharga, dan dengan saling mendukung, kita dapat mencapai hasil yang lebih baik. Tujuan karir jangka panjang saya adalah untuk terus berkembang sebagai pengembang perangkat lunak dan berkontribusi pada proyek-proyek yang memiliki dampak positif bagi masyarakat.
@@ -98,26 +108,26 @@
                 </div>
                 
                 <div class="w-full md:w-2/5">
-                    <div class="bg-blue-200 flex items-center justify-center rounded-lg shadow-md w-full h-64 text-gray-800 text-2xl font-semibold p-4">
-                        <img src="images/ACA.jpg" alt="Hobi Iwan" class="object-cover w-full h-full rounded-lg border-2 border-primary-blue/50">
+                    <div class="bg-primary-brown/20 flex items-center justify-center rounded-lg shadow-md w-full h-64 text-text-dark text-2xl font-semibold p-4">
+                        <img src="images/ACA.jpg" alt="Hobi Iwan" class="object-cover w-full h-full rounded-lg border-2 border-primary-brown/50">
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="proyek-virtsa" class="bg-bg-box p-8 rounded-xl shadow-xl">
-            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-900 border-b-2 pb-2 border-primary-blue/30">Pengalaman & Proyek Desain</h3>
+            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-text-dark border-b-2 pb-2 border-primary-brown/30">Pengalaman</h3>
             
             <div class="space-y-10">
                 
-                <div class="bg-white border border-blue-200 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
-                    <h4 class="font-bold text-2xl text-primary-blue mb-4 border-b pb-2">Qurban</h4>
+                <div class="bg-white border border-primary-brown/20 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                    <h4 class="font-bold text-2xl text-primary-brown mb-4 border-b pb-2">Qurban</h4>
                     <div class="flex flex-col md:flex-row gap-6 items-start">
                         <div class="w-full md:w-1/3 flex-shrink-0">
-                            <img src="images/kurban.jpg" alt="Proyek Branding UMKM" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-blue-300">
+                             <img src="images/kurban.jpg" alt="Proyek Branding UMKM" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-primary-brown/30">
                         </div>
                         <div class="w-full md:w-2/3">
-                            <p class="text-gray-700 leading-relaxed text-lg">
+                            <p class="text-text-dark leading-relaxed text-lg">
                                 Ini merupakan pengalaman atau program kerja pertama saya saat menjabat sebagai Koordinator Divisi Sosial Budaya. Kegiatan ini berkolaborasi dengan beberapa jurusan dengan mengangkat tema “Menguatkan Tali Silaturahmi
 Melalui Qurban Bersama.” Melalui kegiatan ini, kami berupaya membangun kebersamaan, meningkatkan kepedulian sosial, serta mempererat hubungan 
 antar mahasiswa lintas jurusan. Selain itu, kegiatan qurban bersama ini juga 
@@ -127,27 +137,28 @@ menjadi sarana untuk menumbuhkan rasa tanggung jawab, kerja sama tim, dan semang
                     </div>
                 </div>
 
-                <div class="bg-white border border-blue-200 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
-                    <h4 class="font-bold text-2xl text-primary-blue mb-4 border-b pb-2">Sinergy Day</h4>
+                <div class="bg-white border border-primary-brown/20 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                    <h4 class="font-bold text-2xl text-primary-brown mb-4 border-b pb-2">Sinergy Day</h4>
                     <div class="flex flex-col md:flex-row gap-6 items-start">
                         <div class="w-full md:w-1/3 flex-shrink-0">
-                            <img src="images/sinergi day.jpg" alt="Proyek Konten Media Sosial" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-blue-300">
+                            <img src="images/sinergi day.jpg" alt="Proyek Konten Media Sosial" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-primary-brown/30">
                         </div>
                         <div class="w-full md:w-2/3">
-                            <p class="text-gray-700 leading-relaxed text-lg">
+                            <p class="text-text-dark leading-relaxed text-lg">
                                 Program kerja kedua saya yaitu Sinergy Day dengan tema “Ciptakan Harmonisasi, Ukir Memory.” Kegiatan ini dilaksanakan di Walabi dan bertujuan untuk mempererat tali silaturahmi serta membangun kekompakan antara seluruh anggota, khususnya angkatan 24. Melalui berbagai rangkaian kegiatan yang menyenangkan dan interaktif, acara ini menjadi momen penting untuk menumbuhkan rasa kebersamaan, memperkuat komunikasi, serta menciptakan kenangan positif yang dapat meningkatkan solidaritas antar mahasiswa.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white border border-blue-200 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
-                    <h4 class="font-bold text-2xl text-primary-blue mb-4 border-b pb-2">Jalinan Kasih</h4>
+                <div class="bg-white border border-primary-brown/20 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                    <h4 class="font-bold text-2xl text-primary-brown mb-4 border-b pb-2">Jalinan Kasih</h4>
                     <div class="flex flex-col md:flex-row gap-6 items-start">
                         <div class="w-full md:w-1/3 flex-shrink-0">
-                            <img src="images/jalinan kasih.jpg" alt="Proyek UI/UX Design" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-blue-300">
+                            <img src="images/jalinan kasih.jpg" alt="Proyek UI/UX Design" class="w-full h-48 object-cover rounded-md shadow-lg border-2 border-primary-brown/30">
                         </div>
                         <div class="w-full md:w-2/3">
-                            <p class="text-gray-700 leading-relaxed text-lg">
+                            <p class="text-text-dark leading-relaxed text-lg">
                                 Program kerja ke-3 saya yaitu Jalinan Kasih dengan tema “Berbagi Kasih, Menebar Harapan.” Kegiatan ini dilaksanakan di Panti Kartini dengan tujuan membangun rasa kepedulian, meningkatkan jiwa sosial, serta menciptakan interaksi positif bersama anak-anak panti. Melalui kegiatan berbagi dan pendampingan sederhana, kami berusaha memberikan dukungan moral, kebahagiaan, serta membangun hubungan yang penuh kehangatan dan empati.
                             </p>
                         </div>
@@ -158,60 +169,72 @@ menjadi sarana untuk menumbuhkan rasa tanggung jawab, kerja sama tim, dan semang
         </section>
 
         <section id="skill-virtsa" class="bg-bg-box p-8 rounded-xl shadow-xl">
-            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-900 border-b-2 pb-2 border-primary-blue/30">Keahlian (Skills)</h3>
+            <h3 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-text-dark border-b-2 pb-2 border-primary-brown/30">Keahlian (Skill)</h3>
             
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
                 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fbcfe8/831843?text=Ai" alt="Adobe Illustrator" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Illustrator</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                        <img src="https://placehold.co/80x80/000000/F2A600?text=Ai" alt="Illustrator" class="rounded-lg object-cover">
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Illustrator</p>
                 </div>
 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fce7f3/831843?text=Ps" alt="Adobe Photoshop" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Photoshop</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                        <img src="https://placehold.co/80x80/001E36/31A8FF?text=Ps" alt="Photoshop" class="rounded-lg object-cover">
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Photoshop</p>
                 </div>
 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fbcfe8/831843?text=Figma" alt="Figma" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Figma</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                         <img src="https://placehold.co/80x80/E64646/ffffff?text=Figma" alt="Figma" class="rounded-lg object-cover">
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Figma</p>
                 </div>
 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fce7f3/831843?text=Canva" alt="Canva" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Canva</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                        <img src="https://placehold.co/80x80/434BFF/ffffff?text=Canva" alt="Canva" class="rounded-lg object-cover">
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Canva</p>
                 </div>
 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fbcfe8/831843?text=Pr" alt="Premiere Pro" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Premiere Pro</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                        <img src="https://placehold.co/80x80/290236/A6A8FF?text=Pr" alt="Premiere Pro" class="rounded-lg object-cover">
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Premiere Pro</p>
                 </div>
 
-                <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer active:scale-95 active:bg-blue-100">
-                    <img src="https://placehold.co/100x100/fce7f3/831843?text=Writing" alt="Copywriting" class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-md object-cover">
-                    <p class="font-medium text-gray-800">Copywriting</p>
+                <div class="flex flex-col items-center p-4 bg-skill-card-bg rounded-3xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer active:scale-[0.98]">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-xl bg-skill-badge-bg flex items-center justify-center">
+                         <i class="fa-solid fa-pen-to-square fa-3x text-text-dark"></i>
+                    </div>
+                    <p class="font-medium text-text-dark text-center">Copywriting</p>
                 </div>
 
             </div>
         </section>
-
+        
         <section id="contact-virtsa" class="bg-bg-box p-8 rounded-lg shadow-xl max-w-2xl mx-auto">
-            <h3 class="text-3xl font-bold mb-6 text-center text-gray-900 border-b-2 pb-2 border-primary-blue/30">Hubungi Saya</h3>
+            <h3 class="text-3xl font-bold mb-6 text-center text-text-dark border-b-2 pb-2 border-primary-brown/30">Hubungi Saya</h3>
             <form action="#" method="POST">
                 <div class="mb-4">
-                    <label for="name-virtsa" class="block text-sm font-medium text-gray-700">Nama</label>
-                    <input type="text" id="name-virtsa" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required>
+                    <label for="name-virtsa" class="block text-sm font-medium text-text-dark">Nama</label>
+                    <input type="text" id="name-virtsa" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-brown focus:border-primary-brown sm:text-sm" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email-virtsa" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email-virtsa" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required>
+                    <label for="email-virtsa" class="block text-sm font-medium text-text-dark">Email</label>
+                    <input type="email" id="email-virtsa" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-brown focus:border-primary-brown sm:text-sm" required>
                 </div>
                 <div class="mb-6">
-                    <label for="message-virtsa" class="block text-sm font-medium text-gray-700">Pesan</label>
-                    <textarea id="message-virtsa" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue sm:text-sm" required></textarea>
+                    <label for="message-virtsa" class="block text-sm font-medium text-text-dark">Pesan</label>
+                    <textarea id="message-virtsa" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-brown focus:border-primary-brown sm:text-sm" required></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue transition duration-150 ease-in-out">
+                    <button type="submit" class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary-brown hover:bg-primary-brown/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-brown transition duration-150 ease-in-out">
                         Kirim Pesan
                     </button>
                 </div>
